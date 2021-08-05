@@ -11,7 +11,7 @@ export default function Home({ session, posts }) {
   if (!session) return <Login />;
   return (
     <div className="bg-gray-100 overflow-hidden h-screen">
-      <Head>Facebook</Head>
+      <Head>Facebook 2.0</Head>
       <Header />
       <main className="flex">
         <Sidebar />
