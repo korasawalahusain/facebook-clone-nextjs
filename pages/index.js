@@ -12,7 +12,7 @@ export default function Home({ session, posts }) {
   return (
     <div className="bg-gray-100 overflow-hidden h-screen">
       <Head>
-        <title>Amazon 2.0</title>
+        <title>Facebook 2.0</title>
       </Head>
       <Header />
       <main className="flex">
