@@ -9,14 +9,13 @@ import {
   DesktopComputerIcon,
   UsersIcon,
 } from "@heroicons/react/solid";
-import { useSession } from "next-auth/client";
+
 import SidebarRow from "./SidebarRow";
 
-const Sidebar = () => {
-  const [session] = useSession();
+const Sidebar = ({ username, userImage }) => {
   return (
     <div className="p-2 mt-5 max-w-[600px] xl:max-w-[300px]">
-      <SidebarRow src={session.user.image} title={session.user.name} />
+      <SidebarRow src={userImage} title={username} />
       <SidebarRow Icon={UsersIcon} title="Friends" />
       <SidebarRow Icon={UserGroupIcon} title="Groups" />
       <SidebarRow Icon={ShoppingBagIcon} title="Marketplace" />

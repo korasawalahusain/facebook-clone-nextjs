@@ -1,7 +1,7 @@
 import firebase from "firebase";
 import "firebase/storage";
 
-const firebaseConfig = JSON.parse(process.env.FIREBASE_CONFIG);
+const firebaseConfig = JSON.parse(process.env.NEXT_PUBLIC_FIREBASE_CONFIG);
 
 const app = !firebase.apps.length
   ? firebase.initializeApp(firebaseConfig)

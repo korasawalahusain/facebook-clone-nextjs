@@ -14,10 +14,9 @@ import {
   ViewGridIcon,
 } from "@heroicons/react/solid";
 import HeaderIcon from "./HeaderIcon";
-import { signOut, useSession } from "next-auth/client";
+import { signOut } from "next-auth/client";
 
-const Header = () => {
-  const [session] = useSession();
+const Header = ({ userImage }) => {
   return (
     <div className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
       {/* Left */}
@@ -51,7 +50,7 @@ const Header = () => {
       <div className="flex items-center justify-end md:space-x-2">
         <Image
           onClick={signOut}
-          src={session.user.image}
+          src={userImage}
           height={40}
           width={40}
           layout="fixed"
