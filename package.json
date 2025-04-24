@@ -1,14 +1,15 @@
 {
-  "name": "facebook-clone-nextjs",
+  "name": "facebook-v2-nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next dev",
+    "build": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next build",
     "start": "next start"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.1",
+    "cross-env": "^7.0.3",
     "firebase": "^8.6.2",
     "firebase-admin": "^9.8.0",
     "next": "10.2.2",
